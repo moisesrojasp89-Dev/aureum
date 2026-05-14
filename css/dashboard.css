@@ -1,0 +1,80 @@
+.dashboard {
+    padding-top: 140px;
+}
+.dashboard-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.asset-card {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(14, 22, 40, 0.95),
+            rgba(10, 16, 30, 0.95)
+        );
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 28px;
+
+    padding: 2rem;
+
+    min-height: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.asset-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(245, 184, 65, 0.25);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(18, 30, 55, 0.95),
+            rgba(10, 18, 35, 0.95)
+        );
+}
+
+.asset-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.asset-info p {
+    color: var(--muted);
+}
+
+.asset-change {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.positive {
+    color: #00d09c;
+}
+
+.gold {
+    color: var(--gold);
+}
+.chart-box {
+    width: 100%;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+#tradingview-chart {
+    width: 100%;
+    height: 100%;
+}
