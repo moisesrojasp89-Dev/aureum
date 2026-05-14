@@ -582,6 +582,31 @@ button { cursor: pointer; font-family: inherit; }
 
 .asset-pair { font-size: 0.72rem; color: var(--muted-2); }
 
+/* Precio en vivo dentro de tarjeta de mercado */
+.mcard-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mcard-price {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.mcard-change {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.mcard-change.up   { color: var(--green); }
+.mcard-change.down { color: var(--red); }
+
 .market-desc {
   font-size: 0.85rem;
   color: var(--muted);
