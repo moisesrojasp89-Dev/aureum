@@ -3,133 +3,420 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="description" content="Aureum — Análisis profesional y señales claras para traders de Oro, Índices y Bitcoin. Plataforma premium con datos en tiempo real." />
+  <meta property="og:title" content="Aureum | Oro, Índices & Bitcoin" />
+  <meta property="og:description" content="Opera con ventaja. Señales profesionales para traders de Oro, SP500 y BTC." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Aureum | Oro, Índices & Bitcoin</title>
 
-  <!-- Inter Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>✦</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- BACKGROUND GLOW -->
-  <div class="bg-glow"></div>
-  <div class="bg-grid"></div>
+  <!-- ░░ BACKGROUND ░░ -->
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
 
-  <!-- NAVBAR -->
-  <header class="header">
-    <nav class="navbar">
+  <!-- ░░ NAVBAR ░░ -->
+  <header class="header" role="banner">
+    <nav class="navbar container" aria-label="Navegación principal">
 
-      <div class="logo">
-        ✦ AUREUM
-      </div>
+      <a href="/" class="logo" aria-label="Aureum inicio">
+        <span class="logo-star">✦</span> AUREUM
+      </a>
 
-      <ul class="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Mercados</a></li>
-        <li><a href="#">Señales</a></li>
-        <li><a href="#">Premium</a></li>
+      <ul class="nav-links" role="list">
+        <li><a href="#mercados">Mercados</a></li>
+        <li><a href="#senales">Señales</a></li>
+        <li><a href="#premium">Premium</a></li>
       </ul>
 
-      <a href="#" class="nav-btn">Entrar</a>
-      <div class="menu-toggle" id="menu-toggle">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+      <a href="#premium" class="nav-btn">Acceder</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </nav>
   </header>
-  <!-- MOBILE MENU -->
 
-<div class="mobile-menu" id="mobile-menu">
+  <!-- ░░ MOBILE MENU ░░ -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú móvil" aria-hidden="true">
+    <a href="#mercados" class="mobile-link">Mercados</a>
+    <a href="#senales" class="mobile-link">Señales</a>
+    <a href="#premium" class="mobile-link">Premium</a>
+    <a href="#premium" class="mobile-cta">Acceder →</a>
+  </div>
 
-  <a href="#">Inicio</a>
-  <a href="#">Mercados</a>
-  <a href="#">Señales</a>
-  <a href="#">Premium</a>
+  <!-- ░░ HERO ░░ -->
+  <main>
+  <section class="hero container" aria-labelledby="hero-heading">
 
-  <a href="#" class="mobile-btn">
-    Acceder
-  </a>
-
-</div>
-
-
-  <!-- HERO -->
-  <section class="hero container">
-
-    <!-- LEFT -->
     <div class="hero-content">
 
-      <span class="hero-badge">
+      <span class="hero-badge" role="note">
+        <span class="badge-dot" aria-hidden="true"></span>
         Plataforma premium para traders
       </span>
 
-      <h1>
-        Opera Oro, Índices y Bitcoin
-        <span>con ventaja.</span>
+      <h1 id="hero-heading">
+        Opera Oro, Índices<br />y Bitcoin
+        <span class="hero-accent">con ventaja.</span>
       </h1>
 
-      <p>
-        Análisis profesional y señales claras para traders que buscan precisión,
-        estructura y oportunidades reales en los mercados.
+      <p class="hero-desc">
+        Análisis profesional y señales claras para traders que buscan
+        precisión, estructura y oportunidades reales en los mercados.
       </p>
 
       <div class="hero-buttons">
-        <a href="#" class="btn-primary">Ver señales</a>
-        <a href="#" class="btn-secondary">Acceso Premium</a>
+        <a href="#senales" class="btn-primary">
+          Ver señales
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#premium" class="btn-secondary">Acceso Premium</a>
+      </div>
+
+      <!-- STATS STRIP -->
+      <div class="hero-stats" aria-label="Estadísticas">
+        <div class="stat">
+          <span class="stat-num">+2.400</span>
+          <span class="stat-label">Traders activos</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">87%</span>
+          <span class="stat-label">Señales ganadoras</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Activos clave</span>
+        </div>
       </div>
 
     </div>
 
-    <div id="dashboard-component"></div>
-    <div id="calendar-component"></div>
+    <!-- HERO DASHBOARD -->
+    <div class="hero-dashboard" aria-label="Precios en vivo">
 
-
-</section>
-
-
-  <!-- MARKET SECTION -->
-  <section class="market-section container">
-
-    <div class="section-title">
-      <h2>Mercados en vivo</h2>
-      <p>Monitoreo rápido de activos clave.</p>
-    </div>
-
-    <div class="market-grid">
-
-      <div class="market-card">
-        <h3>🟡 Oro</h3>
-        <p>Tendencia lateral con presión alcista.</p>
+      <div class="dashboard-header">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span class="live-label">Mercados en vivo</span>
+        <span class="update-time" id="update-time">—</span>
       </div>
 
-      <div class="market-card">
-        <h3>🟢 SP500</h3>
-        <p>Continuación bullish intradía.</p>
+      <div class="ticker-card" id="card-gold">
+        <div class="ticker-left">
+          <span class="ticker-icon gold-icon" aria-hidden="true">Au</span>
+          <div>
+            <p class="ticker-name">Oro</p>
+            <p class="ticker-pair">XAU/USD</p>
+          </div>
+        </div>
+        <div class="ticker-right">
+          <p class="ticker-price" id="price-gold">—</p>
+          <p class="ticker-change" id="change-gold">—</p>
+        </div>
       </div>
 
-      <div class="market-card">
-        <h3>🟢 BTC</h3>
-        <p>Volatilidad alta y breakout.</p>
+      <div class="ticker-card" id="card-btc">
+        <div class="ticker-left">
+          <span class="ticker-icon btc-icon" aria-hidden="true">₿</span>
+          <div>
+            <p class="ticker-name">Bitcoin</p>
+            <p class="ticker-pair">BTC/USD</p>
+          </div>
+        </div>
+        <div class="ticker-right">
+          <p class="ticker-price" id="price-btc">—</p>
+          <p class="ticker-change" id="change-btc">—</p>
+        </div>
+      </div>
+
+      <div class="ticker-card" id="card-sp">
+        <div class="ticker-left">
+          <span class="ticker-icon sp-icon" aria-hidden="true">S&P</span>
+          <div>
+            <p class="ticker-name">S&P 500</p>
+            <p class="ticker-pair">SPX · Futuro</p>
+          </div>
+        </div>
+        <div class="ticker-right">
+          <p class="ticker-price" id="price-sp">—</p>
+          <p class="ticker-change" id="change-sp">—</p>
+        </div>
+      </div>
+
+      <div class="chart-embed">
+        <iframe
+          src="https://s.tradingview.com/widgetembed/?frametools=0&symbol=OANDA%3AXAUUSD&interval=60&hidesidetoolbar=1&hidetoptoolbar=1&symboledit=0&saveimage=0&toolbarbg=000000&studies=[]&theme=dark&style=1&timezone=Europe%2FMadrid&locale=es&utm_source=aureum&utm_medium=widget"
+          title="Gráfico XAU/USD en tiempo real"
+          loading="lazy"
+          allowtransparency="true"
+          scrolling="no"
+          aria-label="Gráfico de precio del Oro"
+        ></iframe>
       </div>
 
     </div>
 
   </section>
 
+  <!-- ░░ MARKET SECTION ░░ -->
+  <section class="market-section container" id="mercados" aria-labelledby="market-heading">
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Aureum. Trading implica riesgo.</p>
+    <div class="section-header">
+      <div>
+        <h2 id="market-heading">Mercados en vivo</h2>
+        <p>Monitoreo rápido de activos clave con sesgo direccional.</p>
+      </div>
+    </div>
+
+    <div class="market-grid">
+
+      <article class="market-card market-gold" aria-label="Oro">
+        <div class="market-card-top">
+          <div class="market-asset">
+            <span class="asset-icon gold-icon" aria-hidden="true">Au</span>
+            <div>
+              <h3>Oro</h3>
+              <p class="asset-pair">XAU/USD</p>
+            </div>
+          </div>
+          <span class="market-badge badge-lateral" id="badge-gold">Lateral</span>
+        </div>
+        <p class="market-desc">Tendencia lateral con presión alcista sobre zona 2.320. Vigilar reacción en resistencia 2.380.</p>
+        <div class="market-levels">
+          <div class="level">
+            <span class="level-label">Soporte</span>
+            <span class="level-val" id="sup-gold">2.310</span>
+          </div>
+          <div class="level">
+            <span class="level-label">Resistencia</span>
+            <span class="level-val" id="res-gold">2.380</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="market-card market-sp" aria-label="SP500">
+        <div class="market-card-top">
+          <div class="market-asset">
+            <span class="asset-icon sp-icon" aria-hidden="true">S&P</span>
+            <div>
+              <h3>S&P 500</h3>
+              <p class="asset-pair">SPX · CFD</p>
+            </div>
+          </div>
+          <span class="market-badge badge-bull" id="badge-sp">Alcista</span>
+        </div>
+        <p class="market-desc">Continuación bullish intradía. Momentum positivo tras rotura de máximos de sesión europea.</p>
+        <div class="market-levels">
+          <div class="level">
+            <span class="level-label">Soporte</span>
+            <span class="level-val">5.260</span>
+          </div>
+          <div class="level">
+            <span class="level-label">Resistencia</span>
+            <span class="level-val">5.340</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="market-card market-btc" aria-label="Bitcoin">
+        <div class="market-card-top">
+          <div class="market-asset">
+            <span class="asset-icon btc-icon" aria-hidden="true">₿</span>
+            <div>
+              <h3>Bitcoin</h3>
+              <p class="asset-pair">BTC/USD</p>
+            </div>
+          </div>
+          <span class="market-badge badge-bull" id="badge-btc">Breakout</span>
+        </div>
+        <p class="market-desc">Volatilidad alta y breakout sobre 68.000. Confirmación con volumen. Objetivo siguiente zona 72.000.</p>
+        <div class="market-levels">
+          <div class="level">
+            <span class="level-label">Soporte</span>
+            <span class="level-val">65.400</span>
+          </div>
+          <div class="level">
+            <span class="level-label">Resistencia</span>
+            <span class="level-val">72.000</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- ░░ SEÑALES SECTION ░░ -->
+  <section class="signals-section container" id="senales" aria-labelledby="signals-heading">
+
+    <div class="section-header">
+      <div>
+        <h2 id="signals-heading">Señales recientes</h2>
+        <p>Última semana · Actualizadas por nuestros analistas.</p>
+      </div>
+      <a href="#premium" class="btn-ghost">Ver todas →</a>
+    </div>
+
+    <div class="signals-list" role="list">
+
+      <article class="signal-card" role="listitem" aria-label="Señal Oro largo">
+        <div class="signal-header">
+          <div class="signal-asset">
+            <span class="asset-icon gold-icon sm" aria-hidden="true">Au</span>
+            <div>
+              <p class="signal-name">Oro · XAU/USD</p>
+              <p class="signal-time">Hoy · 09:45 CET</p>
+            </div>
+          </div>
+          <span class="signal-dir long">LONG</span>
+        </div>
+        <div class="signal-levels">
+          <div class="slevel">
+            <span>Entrada</span>
+            <strong>2.318 – 2.324</strong>
+          </div>
+          <div class="slevel">
+            <span>Stop</span>
+            <strong class="stop">2.299</strong>
+          </div>
+          <div class="slevel">
+            <span>Target</span>
+            <strong class="target">2.368</strong>
+          </div>
+        </div>
+        <div class="signal-footer">
+          <span class="signal-rr">RR 1:2.6</span>
+          <span class="signal-status active">Activa</span>
+        </div>
+      </article>
+
+      <article class="signal-card blur-card" role="listitem" aria-label="Señal premium">
+        <div class="blur-overlay">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4v2H8V6a4 4 0 0 1 4-4zm6 6H6a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1zm-6 4a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="currentColor"/></svg>
+          <span>Contenido Premium</span>
+          <a href="#premium" class="blur-cta">Desbloquear →</a>
+        </div>
+        <div class="signal-header" aria-hidden="true">
+          <div class="signal-asset">
+            <span class="asset-icon btc-icon sm">₿</span>
+            <div>
+              <p class="signal-name">Bitcoin · BTC/USD</p>
+              <p class="signal-time">Ayer · 15:20 CET</p>
+            </div>
+          </div>
+          <span class="signal-dir long">LONG</span>
+        </div>
+        <div class="signal-levels" aria-hidden="true">
+          <div class="slevel"><span>Entrada</span><strong>██.███</strong></div>
+          <div class="slevel"><span>Stop</span><strong class="stop">██.███</strong></div>
+          <div class="slevel"><span>Target</span><strong class="target">██.███</strong></div>
+        </div>
+      </article>
+
+      <article class="signal-card blur-card" role="listitem" aria-label="Señal premium">
+        <div class="blur-overlay">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4v2H8V6a4 4 0 0 1 4-4zm6 6H6a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1zm-6 4a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="currentColor"/></svg>
+          <span>Contenido Premium</span>
+          <a href="#premium" class="blur-cta">Desbloquear →</a>
+        </div>
+        <div class="signal-header" aria-hidden="true">
+          <div class="signal-asset">
+            <span class="asset-icon sp-icon sm">S&P</span>
+            <div>
+              <p class="signal-name">S&P 500 · SPX</p>
+              <p class="signal-time">Hace 2 días</p>
+            </div>
+          </div>
+          <span class="signal-dir short">SHORT</span>
+        </div>
+        <div class="signal-levels" aria-hidden="true">
+          <div class="slevel"><span>Entrada</span><strong>█.███</strong></div>
+          <div class="slevel"><span>Stop</span><strong class="stop">█.███</strong></div>
+          <div class="slevel"><span>Target</span><strong class="target">█.███</strong></div>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- ░░ PREMIUM SECTION ░░ -->
+  <section class="premium-section container" id="premium" aria-labelledby="premium-heading">
+
+    <div class="premium-inner">
+      <span class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Acceso completo
+      </span>
+      <h2 id="premium-heading">Todo lo que necesita un trader serio.</h2>
+      <p>Señales diarias, análisis profundo, niveles clave y acceso a nuestra comunidad.</p>
+
+      <ul class="premium-features" role="list">
+        <li><span class="feat-check" aria-hidden="true">✓</span> Señales ilimitadas en Oro, SP500 y BTC</li>
+        <li><span class="feat-check" aria-hidden="true">✓</span> Análisis técnico diario con niveles clave</li>
+        <li><span class="feat-check" aria-hidden="true">✓</span> Calendario económico con impacto en tus activos</li>
+        <li><span class="feat-check" aria-hidden="true">✓</span> Alertas instantáneas por Telegram</li>
+        <li><span class="feat-check" aria-hidden="true">✓</span> Acceso a la comunidad privada de traders</li>
+      </ul>
+
+      <div class="premium-cta-group">
+        <a href="#" class="btn-primary btn-large">Empezar ahora →</a>
+        <p class="premium-note">Sin compromiso · Cancela cuando quieras</p>
+      </div>
+    </div>
+
+  </section>
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner container">
+
+      <div class="footer-brand">
+        <span class="logo">✦ AUREUM</span>
+        <p>Plataforma de análisis técnico para traders profesionales de Oro, Índices y Bitcoin.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-col-title">Plataforma</p>
+          <a href="#mercados">Mercados</a>
+          <a href="#senales">Señales</a>
+          <a href="#premium">Premium</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Legal</p>
+          <a href="#">Aviso Legal</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom container">
+      <p>© 2026 Aureum. Todos los derechos reservados.</p>
+      <p class="risk-warning">⚠ El trading implica riesgo significativo de pérdida. El rendimiento pasado no garantiza resultados futuros. Este sitio no proporciona asesoramiento financiero regulado.</p>
+    </div>
   </footer>
-  <script src="js/navbar.js"></script>
-  <script src="js/tradingview.js"></script>
-  <script src="./js/main.js"></script>
+
+  <script src="js/main.js" defer></script>
 
 </body>
 </html>
